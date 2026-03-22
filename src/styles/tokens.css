@@ -3,13 +3,13 @@
 
 :root {
   /* Colors */
-  --color-primary: #4F46E5;        /* Bold accent — CTAs, active links (Indigo) */
-  --color-secondary: #EC4899;      /* Supporting tags, hover states (Pink) */
-  --color-bg: #FFFFFF;             /* Page background (White) */
-  --color-text: #1F2937;           /* High-contrast body copy (Dark Gray) */
-  --color-surface: #F9FAFB;        /* Cards, section containers (Off-White) */
-  --color-muted: #6B7280;          /* Captions, secondary text (Medium Gray) */
-  --color-border: #E5E7EB;         /* Subtle dividers (Light Gray) */
+  --color-primary: oklch(72% 0.22 65);        /* Bold yellow accent — CTAs, active links */
+  --color-secondary: oklch(68% 0.08 45);      /* Warm tan — supporting tags, hover states */
+  --color-bg: oklch(98% 0.01 240);             /* Page background (very light cool gray) */
+  --color-text: oklch(15% 0.02 240);           /* High-contrast body copy (dark cool gray) */
+  --color-surface: oklch(96% 0.01 240);        /* Cards, section containers (light cool gray) */
+  --color-muted: oklch(45% 0.01 240);          /* Captions, secondary text (medium cool gray) */
+  --color-border: oklch(90% 0.01 240);         /* Subtle dividers (very light cool gray) */
 
   /* Typography */
   --font-display: 'Poppins', sans-serif;     /* Distinctive, characterful sans-serif */
@@ -53,6 +53,8 @@
   /* Effects */
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
   --shadow-elevated: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-button-hover: 0 1px 2px rgba(0, 0, 0, 0.05);
   --radius-card: 8px;
   --radius-pill: 999px;
 

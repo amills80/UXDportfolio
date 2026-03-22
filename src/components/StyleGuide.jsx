@@ -4,13 +4,13 @@ import './StyleGuide.css'
 export default function StyleGuide() {
   // Color palette from tokens
   const colors = [
-    { name: 'Primary', token: '--color-primary', value: '#4F46E5' },
-    { name: 'Secondary', token: '--color-secondary', value: '#EC4899' },
-    { name: 'Background', token: '--color-bg', value: '#FFFFFF' },
-    { name: 'Text', token: '--color-text', value: '#1F2937' },
-    { name: 'Surface', token: '--color-surface', value: '#F9FAFB' },
-    { name: 'Muted', token: '--color-muted', value: '#6B7280' },
-    { name: 'Border', token: '--color-border', value: '#E5E7EB' },
+    { name: 'Primary', token: '--color-primary', value: 'oklch(72% 0.22 65)' },
+    { name: 'Secondary', token: '--color-secondary', value: 'oklch(68% 0.08 45)' },
+    { name: 'Background', token: '--color-bg', value: 'oklch(98% 0.01 240)' },
+    { name: 'Text', token: '--color-text', value: 'oklch(15% 0.02 240)' },
+    { name: 'Surface', token: '--color-surface', value: 'oklch(96% 0.01 240)' },
+    { name: 'Muted', token: '--color-muted', value: 'oklch(45% 0.01 240)' },
+    { name: 'Border', token: '--color-border', value: 'oklch(90% 0.01 240)' },
   ]
 
   // Typography scale
@@ -42,6 +42,13 @@ export default function StyleGuide() {
     { label: 'Primary', variant: 'primary' },
     { label: 'Secondary', variant: 'secondary' },
     { label: 'Ghost', variant: 'ghost' },
+  ]
+
+  // Pill/Tag styles
+  const pills = [
+    { label: 'Primary', variant: 'primary' },
+    { label: 'Secondary', variant: 'secondary' },
+    { label: 'Muted', variant: 'muted' },
   ]
 
   return (
@@ -139,6 +146,21 @@ export default function StyleGuide() {
           </div>
         </section>
 
+        {/* Pills/Tags Section */}
+        <section className="section">
+          <h2>Pills & Tags</h2>
+          <div className="pill-grid">
+            {pills.map((pill) => (
+              <div key={pill.variant} className="pill-item">
+                <span className={`pill pill-${pill.variant}`}>
+                  {pill.label}
+                </span>
+                <code>pill-{pill.variant}</code>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Shadows Section */}
         <section className="section">
           <h2>Shadows & Effects</h2>
@@ -154,6 +176,18 @@ export default function StyleGuide() {
                 Elevated Shadow
               </div>
               <code>--shadow-elevated</code>
+            </div>
+            <div className="shadow-item">
+              <div className="shadow-preview" style={{ boxShadow: 'var(--shadow-button)' }}>
+                Button Shadow
+              </div>
+              <code>--shadow-button</code>
+            </div>
+            <div className="shadow-item">
+              <div className="shadow-preview" style={{ boxShadow: 'var(--shadow-button-hover)' }}>
+                Button Hover Shadow
+              </div>
+              <code>--shadow-button-hover</code>
             </div>
           </div>
         </section>

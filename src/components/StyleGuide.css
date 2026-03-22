@@ -175,6 +175,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-button);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: var(--shadow-button-hover);
 }
 
 .btn-primary {
@@ -208,6 +215,52 @@
 }
 
 .button-item code {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+/* Pill Grid */
+.pill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-4);
+}
+
+.pill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+}
+
+.pill {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-tag);
+  font-weight: 500;
+  display: inline-block;
+}
+
+.pill-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.pill-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.pill-muted {
+  background-color: var(--color-muted);
+  color: white;
+}
+
+.pill-item code {
   font-size: 0.75rem;
   color: var(--color-muted);
 }

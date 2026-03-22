@@ -122,12 +122,12 @@ portfolio/
 
 Define all tokens drawn from `guidelines.md §3.2–3.4`:
 
-**✅ COMPLETE** — All tokens defined:
-- **Colors:** Primary (#4F46E5), Secondary (#EC4899), Background, Text, Surface, Muted, Border
+**✅ UPDATED** — All tokens defined with OKLCH color space for perceptual uniformity:
+- **Colors:** Primary (oklch(72% 0.22 65) — bold yellow), Secondary (oklch(68% 0.08 45) — warm tan), Background/Text/Surface/Muted/Border in cool grays
 - **Typography:** Display (Poppins) and Body (Inter) fonts with full type scale
 - **Spacing:** 8pt base unit scale (space-1 through space-10)
 - **Grid:** Mobile/desktop gutters and section padding
-- **Effects:** Shadows, radii, transitions
+- **Effects:** Card, elevated, button shadows (buttons have subtle shadow that reduces on interaction); radii for cards and pills
 
 ### 1.2 Typography (`src/styles/typography.css`)
 - [x] Import chosen fonts (Poppins + Inter from Google Fonts)
@@ -144,7 +144,7 @@ Define all tokens drawn from `guidelines.md §3.2–3.4`:
 - [x] Added accessibility utilities (.sr-only, .visually-hidden)
 - [x] Remove animations for prefers-reduced-motion
 
-**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all tokens visibly. Accessible via the app (will be deleted before Phase 2).
+**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all tokens visibly, including buttons with subtle shadows (reduced on interaction) and shadowless pills/tags for clear differentiation. Accessible via the app (will be deleted before Phase 2).
 
 ---
 
