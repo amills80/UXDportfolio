@@ -1,0 +1,66 @@
+/* ========================================
+   TAG COMPONENT (PILL)
+   Small rounded tags for categories and skills
+   ======================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-tag);
+  font-weight: var(--text-tag-weight);
+  font-family: var(--font-body);
+  line-height: var(--text-tag-line-height);
+  white-space: nowrap;
+}
+
+/* ========================================
+   VARIANTS
+   ======================================== */
+
+.variant-default {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.variant-designops {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-foreground);
+}
+
+.variant-plg {
+  background-color: oklch(0.92 0.08 280); /* Light purple-blue */
+  color: oklch(0.25 0.05 280); /* Dark purple-blue */
+}
+
+.variant-b2b {
+  background-color: oklch(0.93 0.07 180); /* Light teal */
+  color: oklch(0.28 0.06 180); /* Dark teal */
+}
+
+.variant-hci {
+  background-color: oklch(0.91 0.09 320); /* Light magenta */
+  color: oklch(0.26 0.07 320); /* Dark magenta */
+}
+
+.variant-research {
+  background-color: oklch(0.94 0.06 120); /* Light coral */
+  color: oklch(0.30 0.08 120); /* Dark coral */
+}
+
+.variant-motion {
+  background-color: oklch(0.90 0.10 60); /* Light amber */
+  color: oklch(0.27 0.09 60); /* Dark amber */
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Ensure sufficient contrast in high contrast mode */
+@media (prefers-contrast: high) {
+  .tag {
+    border: 1px solid currentColor;
+  }
+}

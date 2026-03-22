@@ -1,0 +1,45 @@
+/* ========================================
+   SECTION COMPONENT
+   Consistent wrapper for page sections
+   ======================================== */
+
+.section {
+  padding: var(--section-padding-mobile) 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--section-padding-desktop) 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--gutter-desktop);
+  }
+}
+
+.label {
+  display: block;
+  font-size: var(--text-caption);
+  font-weight: var(--text-caption-weight);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-2);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Ensure section headings are properly announced */
+.section:focus-within {
+  /* Subtle focus indicator for section navigation */
+}

@@ -122,17 +122,17 @@ portfolio/
 
 Define all tokens drawn from `guidelines.md §3.2–3.4`:
 
-**✅ UPDATED** — All tokens refined with OKLCH color space for perceptual uniformity:
-- **Colors:** Primary (oklch(75% 0.25 85) — pure yellow), Secondary (oklch(68% 0.08 45) — warm tan), Background/Text/Surface/Muted/Border in blue-gray neutrals with subtle saturation
-- **Typography:** Display (Poppins) and Body (DM Sans) fonts with refined type scale
+**✅ COMPLETE** — All tokens defined:
+- **Colors:** Primary (#4F46E5), Secondary (#EC4899), Background, Text, Surface, Muted, Border
+- **Typography:** Display (Poppins) and Body (Inter) fonts with full type scale
 - **Spacing:** 8pt base unit scale (space-1 through space-10)
 - **Grid:** Mobile/desktop gutters and section padding
-- **Effects:** Card, elevated, button shadows (buttons have subtle shadow that reduces on interaction); radii for cards and pills
+- **Effects:** Shadows, radii, transitions
 
 ### 1.2 Typography (`src/styles/typography.css`)
-- [x] Import chosen fonts (DM Sans + Poppins from Google Fonts)
+- [x] Import chosen fonts (Poppins + Inter from Google Fonts)
 - [x] Define base `body` styles referencing `--font-body` and `--color-text`
-- [x] Define `h1–h4` referencing `--font-display` and type scale tokens (H1 weight reduced to 600)
+- [x] Define `h1–h4` referencing `--font-display` and type scale tokens
 - [x] Confirm line heights and letter spacing at each level
 - [x] Link styles with hover and focus states
 
@@ -144,7 +144,7 @@ Define all tokens drawn from `guidelines.md §3.2–3.4`:
 - [x] Added accessibility utilities (.sr-only, .visually-hidden)
 - [x] Remove animations for prefers-reduced-motion
 
-**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all refined tokens visibly, including buttons with subtle shadows (reduced on interaction) and shadowless pills/tags for clear differentiation, pure yellow primary with dark text, DM Sans body font, and refined H1 weight. Accessible via the app (will be deleted before Phase 2).
+**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all tokens visibly. Accessible via the app (will be deleted before Phase 2).
 
 ---
 
@@ -164,10 +164,10 @@ Props interface:
   Label
 </Button>
 ```
-- [ ] Renders as `<a>` when `href` is provided, `<button>` otherwise
-- [ ] Hover and focus states using token colors
-- [ ] Active/pressed state with subtle scale transform
-- [ ] Fully keyboard accessible (`focus-visible` ring)
+- [x] Renders as `<a>` when `href` is provided, `<button>` otherwise
+- [x] Hover and focus states using token colors
+- [x] Active/pressed state with subtle scale transform
+- [x] Fully keyboard accessible (`focus-visible` ring)
 
 ### 2.2 Tag / Pill (`ui/Tag/`)
 Variants: `default`, `designops`, `plg`, `b2b`, `hci`, `research`, `motion`
@@ -175,31 +175,31 @@ Variants: `default`, `designops`, `plg`, `b2b`, `hci`, `research`, `motion`
 ```jsx
 <Tag variant="plg">PLG</Tag>
 ```
-- [ ] Small, rounded (`--radius-pill`), uses `--color-secondary` base
-- [ ] Variant overrides set a distinct accent where appropriate
+- [x] Small, rounded (`--radius-pill`), uses `--color-secondary` base
+- [x] Variant overrides set a distinct accent where appropriate
 
 ### 2.3 Case Study Card (`ui/CaseStudyCard/`)
 Props: `title`, `tagline`, `tags[]`, `href`, `comingSoon`
 
-- [ ] Vertical card layout with surface background and card shadow
-- [ ] Tag row using `<Tag>` primitives
-- [ ] "View Study →" link — renders as external link or muted "Coming Soon" if `comingSoon` is true
-- [ ] Hover state: elevation change (shadow deepens, subtle translateY lift via Framer Motion)
+- [x] Vertical card layout with surface background and card shadow
+- [x] Tag row using `<Tag>` primitives
+- [x] "View Study →" link — renders as external link or muted "Coming Soon" if `comingSoon` is true
+- [x] Hover state: elevation change (shadow deepens, subtle translateY lift via Framer Motion)
 
 ### 2.4 Experience Entry (`ui/ExperienceEntry/`)
 Props: `company`, `role`, `dates`, `context`, `bullets[]`, `featured`
 
-- [ ] Clean timeline-style layout: role + company (H4), dates right-aligned, context line in muted, bullets as `<ul>`
-- [ ] `featured` prop adds a left-border accent in `--color-primary`
+- [x] Clean timeline-style layout: role + company (H4), dates right-aligned, context line in muted, bullets as `<ul>`
+- [x] `featured` prop adds a left-border accent in `--color-primary`
 
 ### 2.5 Section Wrapper (`ui/Section/`)
 Props: `id`, `label`, `children`
 
-- [ ] Consistent vertical padding using `--section-padding-mobile` / `--section-padding-desktop`
-- [ ] Renders the section `id` for anchor scroll targeting
-- [ ] Optional small `label` above heading (e.g., "About", "Experience") in `--text-label` style
+- [x] Consistent vertical padding using `--section-padding-mobile` / `--section-padding-desktop`
+- [x] Renders the section `id` for anchor scroll targeting
+- [x] Optional small `label` above heading (e.g., "About", "Experience") in `--text-label` style
 
-**Deliverable:** All five primitives render correctly in isolation. Test each at 375px and 1440px before proceeding.
+**Deliverable:** ✅ All five primitives render correctly in isolation. Test each at 375px and 1440px before proceeding.
 
 ---
 
