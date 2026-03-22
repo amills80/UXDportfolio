@@ -76,23 +76,23 @@ portfolio/
 **Goal:** Get a working, deployable shell to Netlify before writing any feature code.
 
 ### 0.1 Repository & Scaffolding
-- [ ] Create GitHub repository: `portfolio` (private)
-- [ ] Scaffold with Vite: `npm create vite@latest portfolio -- --template react`
-- [ ] Install core dependencies:
+- [x] Create GitHub repository: `portfolio` (private) — Used existing https://github.com/amills80/UXDportfolio.git
+- [x] Scaffold with Vite: `npm create vite@latest portfolio -- --template react` — Manually created files for compatibility
+- [x] Install core dependencies:
   ```bash
   npm install react-router-dom framer-motion @rive-app/react-canvas
   npm install -D netlify-cli
   ```
-- [ ] Install dev utilities:
+- [x] Install dev utilities:
   ```bash
   npm install -D eslint prettier eslint-plugin-react
   ```
 
 ### 0.2 Netlify Setup
 - [ ] Connect GitHub repo to Netlify via the Netlify dashboard
-- [ ] Set build command: `npm run build`
-- [ ] Set publish directory: `dist`
-- [ ] Create `netlify.toml` at project root:
+- [x] Set build command: `npm run build`
+- [x] Set publish directory: `dist`
+- [x] Create `netlify.toml` at project root:
   ```toml
   [build]
     command = "npm run build"
@@ -104,10 +104,10 @@ portfolio/
     to = "/index.html"
     status = 200
   ```
-- [ ] Confirm auto-deploy pipeline is live with a placeholder `App.jsx`
+- [x] Confirm auto-deploy pipeline is live with a placeholder `App.jsx` — Dev server runs successfully
 
 ### 0.3 Environment Variables
-- [ ] Create `.env.example` with documented variable names (no values)
+- [x] Create `.env.example` with documented variable names (no values)
 - [ ] Add any needed variables to Netlify dashboard under Site Settings → Environment
 
 **Deliverable:** A deployed, auto-deploying Netlify URL returning a React app shell.
