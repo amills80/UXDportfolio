@@ -1,0 +1,102 @@
+/* Typography — Font imports and base styles */
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* Base Typography Styles */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 800;
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  line-height: var(--line-height-snug);
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  line-height: var(--line-height-snug);
+  color: var(--color-text);
+  margin: 0;
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+p {
+  margin: 0;
+}
+
+/* Utility typographic classes */
+
+.text-body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-height-loose);
+  font-weight: 400;
+}
+
+.text-caption {
+  font-size: var(--text-caption);
+  line-height: var(--line-height-relaxed);
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.text-label {
+  font-size: var(--text-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.text-tag {
+  font-size: var(--text-tag);
+  font-weight: 500;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Link styles */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: #3730A3;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

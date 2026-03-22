@@ -1,7 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+
+// Import styles in order: reset → tokens → typography → global
+import './styles/reset.css'
+import './styles/tokens.css'
+import './styles/typography.css'
+import './styles/global.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
