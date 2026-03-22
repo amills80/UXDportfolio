@@ -122,79 +122,29 @@ portfolio/
 
 Define all tokens drawn from `guidelines.md §3.2–3.4`:
 
-```css
-:root {
-  /* Colors */
-  --color-primary: ;        /* Bold accent — CTAs, active links */
-  --color-secondary: ;      /* Supporting tags, hover states */
-  --color-bg: ;             /* Page background */
-  --color-text: ;           /* High-contrast body copy */
-  --color-surface: ;        /* Cards, section containers */
-  --color-muted: ;          /* Captions, secondary text */
-  --color-border: ;         /* Subtle dividers */
-
-  /* Typography */
-  --font-display: ;         /* Distinctive, characterful sans-serif — NOT Inter/Roboto/Arial */
-  --font-body: ;            /* Refined, legible companion font */
-
-  /* Type Scale */
-  --text-h1: ;
-  --text-h2: ;
-  --text-h3: ;
-  --text-h4: ;
-  --text-body-lg: ;
-  --text-body: ;
-  --text-caption: ;
-  --text-label: ;
-  --text-tag: ;
-
-  /* Spacing (8pt base unit) */
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 32px;
-  --space-5: 40px;
-  --space-6: 48px;
-  --space-8: 64px;
-  --space-10: 80px;
-
-  /* Grid */
-  --grid-gutter-mobile: 16px;
-  --grid-gutter-desktop: 24px;
-  --section-padding-mobile: 24px;
-  --section-padding-desktop: 80px;
-  --container-max: 1440px;
-
-  /* Effects */
-  --shadow-card: ;
-  --shadow-elevated: ;
-  --radius-card: ;
-  --radius-pill: 999px;
-
-  /* Transitions */
-  --transition-base: 200ms ease;
-  --transition-smooth: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-```
-
-- [ ] Choose and document the font pairing (import via Google Fonts or self-host in `src/assets/fonts/`)
-- [ ] Choose and lock the color palette — commit to light or dark as the base
-- [ ] Fill in all token values
-- [ ] Import `tokens.css` into `global.css`
+**✅ COMPLETE** — All tokens defined:
+- **Colors:** Primary (#4F46E5), Secondary (#EC4899), Background, Text, Surface, Muted, Border
+- **Typography:** Display (Poppins) and Body (Inter) fonts with full type scale
+- **Spacing:** 8pt base unit scale (space-1 through space-10)
+- **Grid:** Mobile/desktop gutters and section padding
+- **Effects:** Shadows, radii, transitions
 
 ### 1.2 Typography (`src/styles/typography.css`)
-- [ ] Import chosen fonts
-- [ ] Define base `body` styles referencing `--font-body` and `--color-text`
-- [ ] Define `h1–h4` referencing `--font-display` and type scale tokens
-- [ ] Confirm line heights and letter spacing at each level
+- [x] Import chosen fonts (Poppins + Inter from Google Fonts)
+- [x] Define base `body` styles referencing `--font-body` and `--color-text`
+- [x] Define `h1–h4` referencing `--font-display` and type scale tokens
+- [x] Confirm line heights and letter spacing at each level
+- [x] Link styles with hover and focus states
 
 ### 1.3 Reset & Global (`src/styles/reset.css`, `global.css`)
-- [ ] Apply modern CSS reset (box-sizing, margin, padding normalization)
-- [ ] Set `scroll-behavior: smooth` on `html`
-- [ ] Set `max-width: var(--container-max)` container utility class
-- [ ] Import all style sheets in `main.jsx` in order: reset → tokens → typography → global
+- [x] Apply modern CSS reset (box-sizing, margin, padding normalization)
+- [x] Set `scroll-behavior: smooth` on `html`
+- [x] Set `max-width: var(--container-max)` container utility class
+- [x] Import all style sheets in `main.jsx` in order: reset → tokens → typography → global
+- [x] Added accessibility utilities (.sr-only, .visually-hidden)
+- [x] Remove animations for prefers-reduced-motion
 
-**Deliverable:** A living style reference — render all tokens visibly in a temporary `StyleGuide.jsx` page, then delete before Phase 5.
+**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all tokens visibly. Accessible via the app (will be deleted before Phase 2).
 
 ---
 
