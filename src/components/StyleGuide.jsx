@@ -4,18 +4,18 @@ import './StyleGuide.css'
 export default function StyleGuide() {
   // Color palette from tokens
   const colors = [
-    { name: 'Primary', token: '--color-primary', value: 'oklch(72% 0.22 65)' },
+    { name: 'Primary', token: '--color-primary', value: 'oklch(75% 0.25 85)' },
     { name: 'Secondary', token: '--color-secondary', value: 'oklch(68% 0.08 45)' },
-    { name: 'Background', token: '--color-bg', value: 'oklch(98% 0.01 240)' },
-    { name: 'Text', token: '--color-text', value: 'oklch(15% 0.02 240)' },
-    { name: 'Surface', token: '--color-surface', value: 'oklch(96% 0.01 240)' },
-    { name: 'Muted', token: '--color-muted', value: 'oklch(45% 0.01 240)' },
-    { name: 'Border', token: '--color-border', value: 'oklch(90% 0.01 240)' },
+    { name: 'Background', token: '--color-bg', value: 'oklch(98% 0.03 240)' },
+    { name: 'Text', token: '--color-text', value: 'oklch(15% 0.03 240)' },
+    { name: 'Surface', token: '--color-surface', value: 'oklch(96% 0.03 240)' },
+    { name: 'Muted', token: '--color-muted', value: 'oklch(45% 0.04 240)' },
+    { name: 'Border', token: '--color-border', value: 'oklch(90% 0.02 240)' },
   ]
 
   // Typography scale
   const typography = [
-    { name: 'H1', size: '3.5rem', weight: '800', element: 'h1' },
+    { name: 'H1', size: '3.5rem', weight: '600', element: 'h1' },
     { name: 'H2', size: '2.5rem', weight: '700', element: 'h2' },
     { name: 'H3', size: '1.875rem', weight: '700', element: 'h3' },
     { name: 'H4', size: '1.5rem', weight: '600', element: 'h4' },
