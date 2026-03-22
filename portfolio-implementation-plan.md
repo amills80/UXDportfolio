@@ -122,17 +122,17 @@ portfolio/
 
 Define all tokens drawn from `guidelines.md §3.2–3.4`:
 
-**✅ UPDATED** — All tokens defined with OKLCH color space for perceptual uniformity:
-- **Colors:** Primary (oklch(72% 0.22 65) — bold yellow), Secondary (oklch(68% 0.08 45) — warm tan), Background/Text/Surface/Muted/Border in cool grays
-- **Typography:** Display (Poppins) and Body (Inter) fonts with full type scale
+**✅ UPDATED** — All tokens refined with OKLCH color space for perceptual uniformity:
+- **Colors:** Primary (oklch(75% 0.25 85) — pure yellow), Secondary (oklch(68% 0.08 45) — warm tan), Background/Text/Surface/Muted/Border in blue-gray neutrals with subtle saturation
+- **Typography:** Display (Poppins) and Body (DM Sans) fonts with refined type scale
 - **Spacing:** 8pt base unit scale (space-1 through space-10)
 - **Grid:** Mobile/desktop gutters and section padding
 - **Effects:** Card, elevated, button shadows (buttons have subtle shadow that reduces on interaction); radii for cards and pills
 
 ### 1.2 Typography (`src/styles/typography.css`)
-- [x] Import chosen fonts (Poppins + Inter from Google Fonts)
+- [x] Import chosen fonts (DM Sans + Poppins from Google Fonts)
 - [x] Define base `body` styles referencing `--font-body` and `--color-text`
-- [x] Define `h1–h4` referencing `--font-display` and type scale tokens
+- [x] Define `h1–h4` referencing `--font-display` and type scale tokens (H1 weight reduced to 600)
 - [x] Confirm line heights and letter spacing at each level
 - [x] Link styles with hover and focus states
 
@@ -144,7 +144,7 @@ Define all tokens drawn from `guidelines.md §3.2–3.4`:
 - [x] Added accessibility utilities (.sr-only, .visually-hidden)
 - [x] Remove animations for prefers-reduced-motion
 
-**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all tokens visibly, including buttons with subtle shadows (reduced on interaction) and shadowless pills/tags for clear differentiation. Accessible via the app (will be deleted before Phase 2).
+**Deliverable:** ✅ A living style reference — **StyleGuide.jsx component** renders all refined tokens visibly, including buttons with subtle shadows (reduced on interaction) and shadowless pills/tags for clear differentiation, pure yellow primary with dark text, DM Sans body font, and refined H1 weight. Accessible via the app (will be deleted before Phase 2).
 
 ---
 

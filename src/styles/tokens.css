@@ -3,13 +3,13 @@
 
 :root {
   /* Colors */
-  --color-primary: oklch(75% 0.25 85);        /* Pure yellow accent — CTAs, active links */
+  --color-primary: oklch(75% 0.18 95);        /* Pure yellow accent — CTAs, active links */
   --color-secondary: oklch(68% 0.08 45);      /* Warm tan — supporting tags, hover states */
-  --color-bg: oklch(98% 0.03 240);             /* Page background (light cool gray with blue saturation) */
-  --color-text: oklch(15% 0.03 240);           /* High-contrast body copy (dark cool gray with blue saturation) */
-  --color-surface: oklch(96% 0.03 240);        /* Cards, section containers (light cool gray with blue saturation) */
-  --color-muted: oklch(45% 0.04 240);          /* Captions, secondary text (medium cool gray with blue saturation) */
-  --color-border: oklch(90% 0.02 240);         /* Subtle dividers (very light cool gray with blue saturation) */
+  --color-bg: oklch(98% 0.005 230);            /* Page background (near-neutral gray) */
+  --color-text: oklch(15% 0.008 230);          /* High-contrast body copy (near-neutral dark gray) */
+  --color-surface: oklch(96% 0.005 230);       /* Cards, section containers (near-neutral light gray) */
+  --color-muted: oklch(45% 0.01 230);          /* Captions, secondary text (near-neutral medium gray) */
+  --color-border: oklch(90% 0.005 230);        /* Subtle dividers (near-neutral light gray) */
 
   /* Typography */
   --font-display: 'Poppins', sans-serif;     /* Distinctive, characterful sans-serif */

@@ -4,13 +4,13 @@ import './StyleGuide.css'
 export default function StyleGuide() {
   // Color palette from tokens
   const colors = [
-    { name: 'Primary', token: '--color-primary', value: 'oklch(75% 0.25 85)' },
+    { name: 'Primary', token: '--color-primary', value: 'oklch(75% 0.18 95)' },
     { name: 'Secondary', token: '--color-secondary', value: 'oklch(68% 0.08 45)' },
-    { name: 'Background', token: '--color-bg', value: 'oklch(98% 0.03 240)' },
-    { name: 'Text', token: '--color-text', value: 'oklch(15% 0.03 240)' },
-    { name: 'Surface', token: '--color-surface', value: 'oklch(96% 0.03 240)' },
-    { name: 'Muted', token: '--color-muted', value: 'oklch(45% 0.04 240)' },
-    { name: 'Border', token: '--color-border', value: 'oklch(90% 0.02 240)' },
+    { name: 'Background', token: '--color-bg', value: 'oklch(98% 0.005 230)' },
+    { name: 'Text', token: '--color-text', value: 'oklch(15% 0.008 230)' },
+    { name: 'Surface', token: '--color-surface', value: 'oklch(96% 0.005 230)' },
+    { name: 'Muted', token: '--color-muted', value: 'oklch(45% 0.01 230)' },
+    { name: 'Border', token: '--color-border', value: 'oklch(90% 0.005 230)' },
   ]
 
   // Typography scale
