@@ -18,8 +18,8 @@ export const experience = [
     featured: true
   },
   {
-    company: "Beeline (II)",
-    role: "Product Designer",
+    company: "Beeline (cont.)",
+    role: "Product Designer II",
     dates: "Jan 2021 – Apr 2023",
     context: "B2B SaaS platform for workforce management and staffing solutions",
     bullets: [
@@ -29,8 +29,8 @@ export const experience = [
     featured: false
   },
   {
-    company: "Beeline (I)",
-    role: "Full-Stack Developer",
+    company: "Beeline",
+    role: "UX Engineer / Designer",
     dates: "Aug 2018 – Dec 2020",
     context: "Internal tools and platform development for staffing analytics.",
     bullets: [
@@ -41,8 +41,8 @@ export const experience = [
   },
   {
     company: "Independent Contractor",
-    role: "UX Designer & Developer",
-    dates: "2015 – 2018",
+    role: "Full Stack Developer",
+    dates: "Apr 2015 – Apr 2018",
     context: "Freelance design and development for startups and small businesses.",
     bullets: [
       "Delivered end-to-end UX and web development for 10+ clients, focusing on accessibility and conversion optimization."

@@ -103,3 +103,47 @@ Use direct static file linking (`/resume.pdf`) for both buttons unless a forced 
    - Production build completed successfully (`npm run build`).
 3. URL smoke check
    - `GET /resume.pdf` returned `200 application/pdf` after changes.
+
+## Phase 4 Execution Results (Completed March 23, 2026)
+1. Netlify routing hardening implemented
+   - Added explicit API redirect in `netlify.toml`:
+     - `/api/* -> /.netlify/functions/:splat 200`
+   - Kept SPA catch-all redirect after API rule.
+2. Function hardening implemented in `netlify/functions/download-resume.js`
+   - Added explicit `404` response when resume file is not found.
+   - Added `500` response and logging for unexpected runtime errors.
+   - Improved resume path resolution to support both local and bundled function runtimes.
+3. Validation results
+   - Initial post-hardening check returned `404 application/json` (function reachable, file path issue confirmed).
+   - After path-resolution fix: `GET /api/download-resume` returned `200 application/pdf`.
+   - `Content-Disposition` header confirmed: `attachment; filename="Alan-Mills-Resume.pdf"`.
+
+## Phase 5 Execution Results (Completed March 23, 2026)
+1. Wiring validation
+   - Hero resume CTA confirmed at `href="/resume.pdf"` in `src/components/Hero/Hero.jsx`.
+   - Experience resume CTA confirmed at `href="/resume.pdf"` in `src/components/Experience/Experience.jsx`.
+2. Regression/build validation
+   - Production build succeeded (`npm run build`).
+3. Endpoint validation
+   - Vite preview:
+     - `GET /resume.pdf` -> `200 application/pdf`
+     - `GET /api/download-resume` -> `200 text/html` (expected in pure Vite preview; no functions runtime)
+   - Netlify dev:
+     - `GET /resume.pdf` -> `200 application/pdf`
+     - `GET /api/download-resume` -> `200 application/pdf`
+     - `Content-Disposition` header present for API response.
+4. Remaining manual QA (recommended)
+   - Click both resume buttons in browser (desktop + mobile viewport).
+   - Confirm keyboard activation and visible focus styling.
+
+## Phase 6 Execution Results (Completed March 23, 2026)
+1. Definition of Done status
+   - DoD #1 (Both buttons reliably download/open the same `resume.pdf`): `Complete`
+   - DoD #2 (Behavior matches design intent across local + deployed environments): `Complete in local validation`; `Pending final production click-through confirmation`
+   - DoD #3 (No console/network errors for resume actions): `No automated network errors detected in local smoke checks`; `Pending final manual browser console verification`
+   - DoD #4 (Routing config documented and stable): `Complete` (documented in `netlify.toml` and this spec)
+2. Final implementation snapshot
+   - Primary user path uses static link `/resume.pdf` for both visible resume CTAs.
+   - Optional API fallback `/api/download-resume` is now properly routed and hardened with error handling.
+3. Release readiness
+   - Ready for merge/deploy, with one final manual browser QA pass recommended on Netlify preview/production.

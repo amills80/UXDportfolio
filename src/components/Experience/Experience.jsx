@@ -19,7 +19,7 @@ export default function Experience() {
           variant="primary"
           size="large"
         >
-          ⬇ Download Resume (PDF)
+          Download Resume (PDF)
         </Button>
         <div className={styles.caption}>Last updated March 2026</div>
       </div>
