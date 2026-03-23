@@ -1,0 +1,256 @@
+/* ========================================
+   NAV COMPONENT
+   Fixed sticky navigation with desktop/mobile variants
+   ======================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition: all 200ms ease;
+  padding: var(--spacing-2) 0;
+}
+
+.nav.scrolled {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-card);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-mobile);
+}
+
+/* ========================================
+   BRAND / LOGO
+   ======================================== */
+
+.brand a {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.brand a:hover {
+  color: var(--color-link);
+}
+
+.brand a:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+.brandIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--spacing-2);
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ========================================
+   DESKTOP NAVIGATION
+   ======================================== */
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-4);
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all 200ms ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: var(--color-link);
+}
+
+.navLinks a:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* Active link indicator — bottom accent line */
+.navLinks a.active {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.navLinks a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-link);
+  border-radius: var(--radius-full);
+}
+
+/* ========================================
+   MOBILE HAMBURGER BUTTON
+   ======================================== */
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-1);
+}
+
+.hamburgerIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 200ms ease;
+}
+
+.hamburger:hover .hamburgerIcon {
+  transform: scale(1.1);
+}
+
+.hamburger:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+
+/* ========================================
+   MOBILE MENU DRAWER & BACKDROP
+   ======================================== */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 300px;
+  background-color: var(--color-bg);
+  z-index: 101;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-4);
+  gap: var(--spacing-4);
+  flex: 1;
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--spacing-3);
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNavLinks a {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 200ms ease;
+  display: block;
+  padding: var(--spacing-2) 0;
+}
+
+.mobileNavLinks a:hover {
+  color: var(--color-link);
+}
+
+.mobileNavLinks a:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.mobileNavLinks a.active {
+  color: var(--color-link);
+  font-weight: 600;
+  border-left: 3px solid var(--color-link);
+  padding-left: var(--spacing-2);
+}
+
+.drawerCTA {
+  padding-top: var(--spacing-3);
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .container {
+    padding: 0 var(--section-padding-desktop);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY: REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .navLinks a,
+  .hamburger span,
+  .drawer {
+    transition: none;
+  }
+
+  .navLinks a.active::after {
+    animation: none;
+  }
+}

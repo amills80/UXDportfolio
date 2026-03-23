@@ -1,0 +1,193 @@
+/* ========================================
+   HERO SECTION
+   Full-screen hero with Rive animation background
+   ======================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ========================================
+   RIVE ANIMATION BACKGROUND
+   ======================================== */
+
+.riveBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.riveBackground canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+/* ========================================
+   FOREGROUND CONTENT
+   ======================================== */
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-8);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-mobile);
+  width: 100%;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+.name {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  line-height: var(--text-h1-line-height);
+  letter-spacing: var(--text-h1-letter-spacing);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  line-height: var(--text-h2-line-height);
+  letter-spacing: var(--text-h2-letter-spacing);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: var(--text-body-large);
+  font-weight: 400;
+  line-height: var(--text-body-large-line-height);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-3) 0;
+}
+
+.subTagline {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  font-weight: 400;
+  line-height: var(--text-caption-line-height);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-6) 0;
+}
+
+/* ========================================
+   CTA ROW
+   ======================================== */
+
+.ctaRow {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: center;
+}
+
+/* ========================================
+   PHOTO CONTAINER
+   ======================================== */
+
+.photoContainer {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.photo {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-6);
+  }
+
+  .photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .content {
+    padding: 0 var(--section-padding-mobile);
+  }
+
+  .name {
+    font-size: var(--text-h1-mobile);
+  }
+
+  .title {
+    font-size: var(--text-h2-mobile);
+  }
+
+  .photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY: REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .riveBackground canvas {
+    animation: none;
+  }
+
+  .name,
+  .title,
+  .tagline,
+  .subTagline,
+  .ctaRow,
+  .photoContainer {
+    animation: none;
+  }
+}

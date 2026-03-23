@@ -41,7 +41,7 @@ export default function CaseStudyCard({
         {comingSoon ? (
           <span className={styles.comingSoon}>Coming Soon</span>
         ) : (
-          <span className={styles.viewStudy}>View Study →</span>
+          <span className={styles.viewStudy}><span className="pill-primary-on-light">View Study →</span></span>
         )}
       </div>
     </>

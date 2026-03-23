@@ -1,0 +1,47 @@
+.experience {
+  padding: var(--spacing-8) 0;
+  background: var(--color-bg);
+}
+
+.label {
+  display: inline-block;
+  font-size: var(--font-size-label);
+  font-weight: 500;
+  margin-bottom: var(--spacing-4);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* Remove direct color, use pill-primary-on-light in markup */
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resumeCtaRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-6);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 800px) {
+  .entries, .resumeCtaRow {
+    max-width: 100%;
+    padding-left: var(--spacing-2);
+    padding-right: var(--spacing-2);
+  }
+}

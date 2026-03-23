@@ -1,4 +1,18 @@
 /* ========================================
+   PILL FOR PRIMARY TEXT ON LIGHT
+   ======================================== */
+
+.pill-primary-on-light {
+  display: inline-block;
+  background-color: var(--color-text-light);
+  color: var(--color-primary);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-tag);
+  font-weight: var(--text-tag-weight);
+  font-family: var(--font-body);
+}
+/* ========================================
    STYLEGUIDE COMPONENT STYLES
    Comprehensive design system reference
    ======================================== */

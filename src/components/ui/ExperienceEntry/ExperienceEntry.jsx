@@ -26,7 +26,7 @@ export default function ExperienceEntry({
       <div className={styles.header}>
         <div className={styles.roleCompany}>
           <h4 className={styles.role}>{role}</h4>
-          <span className={styles.company}>{company}</span>
+          <span className={styles.company}><span className="pill-primary-on-light">{company}</span></span>
         </div>
         <span className={styles.dates}>{dates}</span>
       </div>

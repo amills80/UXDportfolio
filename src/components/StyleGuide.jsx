@@ -215,7 +215,7 @@ export default function StyleGuide() {
         </section>
 
         {/* UI Components Section */}
-        <section className="section">
+        <section className="section" id="about">
           <h2>UI Components — Phase 2 Primitives</h2>
 
           {/* Buttons */}
@@ -255,7 +255,7 @@ export default function StyleGuide() {
           </div>
 
           {/* Tags */}
-          <div className="component-group">
+          <div className="component-group" id="experience">
             <h3>Tags</h3>
             <div className="component-examples">
               <div className="example-row">
@@ -271,7 +271,7 @@ export default function StyleGuide() {
           </div>
 
           {/* Case Study Cards */}
-          <div className="component-group">
+          <div className="component-group" id="studies">
             <h3>Case Study Cards</h3>
             <div className="component-examples">
               <div className="card-grid">

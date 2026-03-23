@@ -41,8 +41,8 @@
 .company {
   font-size: var(--text-body);
   font-weight: var(--font-weight-medium);
-  color: var(--color-primary);
-  display: block;
+  display: inline-block;
+  /* Remove direct color, use pill-primary-on-light in markup */
 }
 
 .dates {

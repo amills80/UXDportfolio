@@ -1,0 +1,69 @@
+.about {
+  padding: var(--spacing-8) 0;
+  background: var(--color-bg-alt);
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.label {
+  display: inline-block;
+  font-size: var(--font-size-label);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* Remove direct color, use pill-primary-on-light in markup */
+}
+
+.headline {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text);
+}
+
+.summary {
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.personality {
+  font-size: var(--font-size-body);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-3);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.leftCol {
+  flex: 2;
+  min-width: 0;
+}
+
+.rightCol {
+  flex: 1;
+  min-width: 220px;
+}
+
+@media (max-width: 800px) {
+  .inner {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  .leftCol, .rightCol {
+    flex: unset;
+    min-width: 0;
+  }
+}
