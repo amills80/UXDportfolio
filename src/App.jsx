@@ -5,6 +5,7 @@ import './App.css'
 import About from './components/About/About'
 import Experience from './components/Experience/Experience'
 import { Studies } from './components'
+import { Footer } from './components'
 
 function App() {
   const [showStyleGuide, setShowStyleGuide] = useState(false)
@@ -37,6 +38,7 @@ function App() {
       <About />
       <Experience />
       <Studies />
+      <Footer />
       <button
         onClick={() => setShowStyleGuide(true)}
         style={{

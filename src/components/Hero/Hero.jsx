@@ -85,7 +85,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 1.4 }}
         >
           <img
-            src="/placeholder-photo.jpg"
+            src="/headshot.png"
             alt="Alan Mills - Senior Product Designer & UX Strategist"
             className={styles.photo}
           />
