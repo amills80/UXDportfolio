@@ -15,7 +15,7 @@ export default function Experience() {
       <div className={styles.resumeCtaRow}>
         <Button
           as="a"
-          href="/api/download-resume"
+          href="/resume.pdf"
           variant="primary"
           size="large"
         >

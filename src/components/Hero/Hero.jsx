@@ -72,7 +72,7 @@ export function Hero() {
             <Button variant="primary" size="large">
               View My Work
             </Button>
-            <Button variant="ghost" size="large">
+            <Button as="a" href="/resume.pdf" variant="ghost" size="large">
               Download Resume (PDF)
             </Button>
           </motion.div>
